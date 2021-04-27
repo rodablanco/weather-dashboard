@@ -52,5 +52,32 @@ var fiveDay = function (){
 
 $.getJSON(`http://api.openweathermap.org/data/2.5/forecast?q=${City}&units=imperial&appid=55e59dbef56313cb7bcc2acb12bedeef`, function(data) {
     console.log(data);
+    var date1 = data.list[1].dt_txt;
+// console.log("what is this", date1)
+    var date2 = data.list[10].dt_txt;
+    var date3 = data.list[18].dt_txt;
+    var date4 = data.list[26].dt_txt;
+    var date5 = data.list[34].dt_txt;
+    
+    
+    var icon1 = `http://api.openweathermap.org/img/w/${data.list[1].weather[0].icon}.png`;
+    var icon2 = `http://api.openweathermap.org/img/w/${data.list[10].weather[0].icon}.png`;
+    var icon3 = `http://api.openweathermap.org/img/w/${data.list[18].weather[0].icon}.png`;
+    var icon4 = `http://api.openweathermap.org/img/w/${data.list[26].weather[0].icon}.png`;
+    var icon5 = `http://api.openweathermap.org/img/w/${data.list[34].weather[0].icon}.png`;
+     
+    
+    $('#day1').append(date1);
+    $('#day2').append(date2);
+    $('#day3').append(date3);
+    $('#day4').append(date4);
+    $('#day5').append(date5);
+
+
+     $('#iconf1').attr("src", icon1);
+     $('#iconf2').attr("src", icon2);
+     $('#iconf3').attr("src", icon3);
+     $('#iconf4').attr("src", icon4);
+     $('#iconf5').attr("src", icon5);
 })  
 
