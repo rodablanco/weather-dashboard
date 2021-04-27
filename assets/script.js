@@ -65,6 +65,19 @@ $.getJSON(`http://api.openweathermap.org/data/2.5/forecast?q=${City}&units=imper
     var icon3 = `http://api.openweathermap.org/img/w/${data.list[18].weather[0].icon}.png`;
     var icon4 = `http://api.openweathermap.org/img/w/${data.list[26].weather[0].icon}.png`;
     var icon5 = `http://api.openweathermap.org/img/w/${data.list[34].weather[0].icon}.png`;
+
+    var tempf1 = Math.floor(data.list[10].main.temp);
+    var tempf2 = Math.floor(data.list[18].main.temp);
+    var tempf3 = Math.floor(data.list[26].main.temp);
+    var tempf4 = Math.floor(data.list[34].main.temp);
+    var tempf5 = Math.floor(data.list[1].main.temp);
+
+    $('#tempf1').append(`<p>${tempf1}</p>`);
+    $('#tempf2').append(`<p>${tempf2}</p>`);
+    $('#tempf3').append(`<p>${tempf3}</p>`);
+    $('#tempf4').append(`<p>${tempf4}</p>`);
+    $('#tempf5').append(`<p>${tempf5}</p>`);
+
      
     
     $('#day1').append(date1);
