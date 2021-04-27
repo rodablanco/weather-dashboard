@@ -2,3 +2,14 @@
     height: 300px;
     width: 200px;
 }
+
+.forcast{
+    display:flex;
+    height: 300px;
+    width: 200px;
+
+}
+
+.datef{
+    border: solid 4px black
+}
