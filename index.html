@@ -9,7 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Weather Dashboard</title>
 </head>
@@ -21,68 +27,87 @@
   </header>
 
   <div class="container">
-
-    <aside>
-      <input type="text" type="submit" class="search" placeholder="Type city name here">
-    <button id="search">Search</button>
-    </aside>
-    <div class="weatherInfo">
-      <img class="icon">
-      <div class="city"></div>
-      <div class="status"></div>
-      <div class="temp"></div>
-      <div class="date"></div>
-      <div class="wind"></div>
-    </div>
-    <div class="forcast">
-      <div class="datef d-flex">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img  alt="weather icon" id="iconf1">
-        <div id="day1"></div>
-        <div id="tempf1"></div>
-          </div>
+    <div class="currentWeather">
+      <aside>
+        <input type="text" type="submit" class="search" placeholder="Type city name here">
+        <button id="search">Search</button>
+        <div >
+          <ol class="recentSearch"></ol>
         </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img  alt="weather icon" id="iconf2">
+      </aside>
+      <div class="weatherInfo card" style="
+    align-items: center;">
+
+        <img class="icon">
+        <div class="city"></div>
+        <div class="status"></div>
+        <div class="temp"></div>
+        <div class="date"></div>
+        <div class="wind"></div>
+      </div>
+    </div>
+    <div class="forcast sm">
+      <div>
+        <div class="card" id="forcast1" ">
+          <div class=" card-body">
+          <img id="iconf1">
+          <div id="day1"></div>
+          <div id="tempf1"></div>
+          <div id="humid1"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card" ">
+          <div class=" card-body">
+        <img id="iconf2">
         <div id="day2"></div>
         <div id="tempf2"></div>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img  alt="weather icon" id="iconf3">
-        <div id="day3"></div>
-      <div id="tempf3"></div>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img  alt="weather icon" id="iconf4">
-            <div id="day4"></div>
-            <div id="tempf4"></div>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img  alt="weather icon" id="iconf5">
-        <div id="day5"></div>
-        <div id="tempf5"></div>
-          </div>
-        </div>
-        
-  
-      
-      
-      
-     
-     
-      
-      
-      
-      <div class="humidf"></div>
+        <div id="humid2"></div>
+      </div>
     </div>
+  </div>
+  <div>
+    <div class="card" ">
+          <div class=" card-body">
+      <img id="iconf3">
+      <div id="day3"></div>
+      <div id="tempf3"></div>
+      <div id="humid3"></div>
+    </div>
+  </div>
+  </div>
+  <div>
+    <div class="card" ">
+          <div class=" card-body">
+      <img id="iconf4">
+      <div id="day4"></div>
+      <div id="tempf4"></div>
+      <div id="humid4"></div>
+    </div>
+  </div>
+  </div>
+  <div>
+    <div class="card" ">
+          <div class=" card-body">
+      <img id="iconf5">
+      <div id="day5"></div>
+      <div id="tempf5"></div>
+      <div id="humid5"></div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  </div>
 
 
 
